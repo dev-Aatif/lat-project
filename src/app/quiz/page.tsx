@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { supabase } from '@/utils/supabaseClient'
-import QuestionCard from '@/components/QuestionCard'
+import QuestionCard from '@/components/Questioncard'
 
 type Question = {
   id: string
