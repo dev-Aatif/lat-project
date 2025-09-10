@@ -44,13 +44,13 @@ export default function QuizPage() {
         } else {
           setError('No questions found for this subject')
         }
-      } catch (error) {
-        setError('Failed to load questions')
+      } catch (err) {
+        setError('An unexpected error occurred')
       } finally {
         setIsLoading(false)
       }
     }
-    
+
     fetchQuestions()
   }, [subject])
 
