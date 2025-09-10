@@ -44,7 +44,7 @@ export default function QuizPage() {
         } else {
           setError('No questions found for this subject')
         }
-      } catch (err) {
+      } catch {
         setError('An unexpected error occurred')
       } finally {
         setIsLoading(false)
