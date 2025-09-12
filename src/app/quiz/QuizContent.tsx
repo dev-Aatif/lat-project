@@ -7,12 +7,14 @@ import QuestionCard from '@/components/Questioncard'
 
 type Question = {
   id: string
+  subject: string
   question_text: string
   option1: string
   option2: string
   option3: string
   option4: string
   correct_index: number
+  explanation: string
 }
 
 export default function QuizContent() {
@@ -32,20 +34,30 @@ export default function QuizContent() {
         let query = supabase.from('questions').select('*')
         
         if (subject) {
-          query = query.eq('subject', subject)
+          console.log('Filtering by subject:', subject)
+          query = query.ilike('subject', subject)
+        } else {
+          console.log('No subject filter applied')
         }
         
-        const { data, error } = await query.limit(10)
+        const { data, error } = await query
         
         if (error) {
           setError(error.message)
+          console.error('Supabase error:', error)
         } else if (data && data.length > 0) {
+          console.log(`Found ${data.length} questions for subject: ${subject || 'all'}`)
+
           setQuestions(data as Question[])
         } else {
-          setError('No questions found for this subject')
+          const errorMsg = subject ? `No questions found for ${subject}` : `No questions found for ${subject}`
+          setError(errorMsg)
+          console.log(errorMsg)
         }
-      } catch {
-        setError('An unexpected error occurred')
+       } catch (err) {
+        const errorMsg = 'An unexpected error occurred'
+        setError(errorMsg)
+        console.error(errorMsg, err)
       } finally {
         setIsLoading(false)
       }

@@ -2,12 +2,12 @@ import Link from "next/link";
 import Head from "next/head";
 
 const subjects = [
-  { name: "English", href: "/quiz?subject=english", color: "bg-blue-500" },
-  { name: "General Knowledge", href: "/quiz?subject=gk", color: "bg-purple-500" },
-  { name: "Islamic Studies", href: "/quiz?subject=islamic", color: "bg-green-500" },
-  { name: "Pakistan Studies", href: "/quiz?subject=pakistan", color: "bg-amber-500" },
-  { name: "Urdu", href: "/quiz?subject=urdu", color: "bg-rose-500" },
-  { name: "Math (Basic)", href: "/quiz?subject=math", color: "bg-indigo-500" },
+  { name: "English", href: "/quiz?subject=English", color: "bg-blue-500" },
+  { name: "General Knowledge", href: "/quiz?subject=General Knowledge", color: "bg-purple-500" },
+  { name: "Islamic Studies", href: "/quiz?subject=Islamic Studies", color: "bg-green-500" },
+  { name: "Pakistan Studies", href: "/quiz?subject=Pakistan Studies", color: "bg-amber-500" },
+  { name: "Urdu", href: "/quiz?subject=Urdu", color: "bg-rose-500" },
+  { name: "Math (Basic)", href: "/quiz?subject=Math (Basic)", color: "bg-indigo-500" },
 ];
 
 export default function HomePage() {
