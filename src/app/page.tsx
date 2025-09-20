@@ -111,7 +111,45 @@ export default function HomePage() {
               </div>
             </div>
           </section>
+
+
+           {/* Mock Exams Section */}
+<section className="py-12">
+  <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-800 dark:text-white mb-8">
+    Mock Exams
+  </h2>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <Link
+      href="/mock"
+      className="group relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center"
+    >
+      <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+        <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Take Mock Exam</h3>
+      <p className="text-gray-600 dark:text-gray-300 text-center">Simulate the full LAT exam experience with timed 75-mark papers</p>
+    </Link>
+    
+    <Link
+      href="/mock-history"
+      className="group relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center"
+    >
+      <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+        <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      </div>
+      <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Mock Exam History</h3>
+      <p className="text-gray-600 dark:text-gray-300 text-center">Review your past mock exam results and track your progress</p>
+    </Link>
+  </div>
+</section>
         </main>
+
+        
 
         {/* Footer */}
         <footer className="text-center py-8 text-gray-600 dark:text-gray-400 text-sm">
